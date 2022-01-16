@@ -3,14 +3,6 @@
     padding: 70px 0 78px;
     background: url('../../img/bg_1_2.png') center (center/cover) no-repeat;
 
-    &__title {
-        color: #0d0d0d;
-        font-size: 30px;
-        font-weight: 400;
-        text-transform: uppercase;
-        text-align: center;
-    }
-
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -38,6 +30,5 @@
             color: $main_color;
         }
     }
-
 
 }
