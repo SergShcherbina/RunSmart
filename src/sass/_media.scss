@@ -1,12 +1,11 @@
 @media (max-width: 1200px) {
-
 }
 
 @media (max-width: 991px) {
+
     .header {
         justify-content: space-around;
         }
-
 
     .promo {
         &__wrapper {
@@ -19,6 +18,10 @@
             justify-content: space-around;
         }
     }
+
+    .container {
+        max-width: 90%;
+    }
 } 
 
 @media (max-width: 767px) {
@@ -28,6 +31,7 @@
             display: none;
         }
     }
+
     .benefits {
         &__wrapper {
             flex-direction: column;
@@ -36,16 +40,45 @@
         &__item {
             width: 80%;
         }
+        &__descr {
+            font-size: 16px;
+        }
     }
+
+    .consultation {
+        &__descr {
+            text-align: center;
+        }
+    }
+
+    .container {
+        max-width: 85%;
+    }
+
+    .promo {
+        &__header {
+            display: inline;
+            text-align: center;
+        }
+        &__subheader {
+            font-size: 23px;
+            text-align: center;
+        }
+    }
+    
 }
+
 @media (max-width: 575px) {
+   
     .header {
         &__logo {
             width: 185px;
+            img {
+                width: 90%;
+            }
         }
         &__phone {
             font-size: 16px;
-    
         }
         &__header {
             font-size: 30px;
@@ -53,22 +86,22 @@
         &__subheader {
             display: none;
         }
-        
     }
     
-
     .promo {
         &__header {
             display: inline;
             text-align: center;
-            font-size: 37px;
-            font-weight: 500;
+            font-size: 40px;
+            font-weight: 700;
             line-height: 47px;
         }
         &__subheader {
-            display: none;
+            font-size: 21px;
+            text-align: center;
         }
-        &__icon {
+
+        &__icons {
             font-size: 16px;
             justify-content: space-evenly;
         }
