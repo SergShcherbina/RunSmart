@@ -12,26 +12,22 @@
             align-items: center;
         }
     }
-
     .benefits {
         &__wrapper {
             justify-content: space-around;
         }
     }
-
     .container {
         max-width: 90%;
     }
 } 
 
-@media (max-width: 767px) {
-
+@media (max-width: 767px) { 
     .header {
         &__official {
             display: none;
         }
     }
-
     .benefits {
         &__wrapper {
             flex-direction: column;
@@ -42,19 +38,31 @@
         }
         &__descr {
             font-size: 16px;
+           
         }
     }
-
-    .consultation {
-        &__descr {
-            text-align: center;
+    .carousel {
+        padding: 81px 0 100px;
+        .slick-dots {
+            position: absolute;
+            left: calc(50% - 50px);
+            top: 85%;
+        .slick-active {
+            box-shadow: 1px 1px  10px $main_color;
+        }
+        li {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $main_color;
+            margin: 20px;
+            transition: 0.5s all;
+        }
         }
     }
-
     .container {
         max-width: 85%;
     }
-
     .promo {
         &__header {
             display: inline;
@@ -65,11 +73,44 @@
             text-align: center;
         }
     }
-    
+    .review {
+        &__items {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__wrapper {
+            margin-left: 0;
+            margin-top: 20px;
+            text-align: center;
+        }        
+    }
 }
 
 @media (max-width: 575px) {
-   
+    .catalog {
+        padding: 0 0 100px 0;
+        &__tabs {
+            flex-direction: column;
+            align-items: center;
+            padding: 26px;
+        }
+        &__tab {
+            margin-bottom: 5px;
+        }
+        &__content {
+            margin-top: 26px;
+        }
+        li {
+            .slick-active {
+                transform: rotate(20%);
+            }
+        }
+    }
+   .button {
+       &_mini {
+           font-size: 16px;
+       }
+   }   
     .header {
         &__logo {
             width: 185px;
@@ -87,7 +128,6 @@
             display: none;
         }
     }
-    
     .promo {
         &__header {
             display: inline;
@@ -100,7 +140,6 @@
             font-size: 21px;
             text-align: center;
         }
-
         &__icons {
             font-size: 16px;
             justify-content: space-evenly;
@@ -109,4 +148,5 @@
             margin-top: 40px;
         }
     }
+
 }

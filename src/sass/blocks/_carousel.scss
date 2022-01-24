@@ -1,12 +1,13 @@
-.carousel {
+.carousel  {
     padding: 81px 0;
     &__inner {
         width: 60%;
         margin: 0 auto;
         position: relative;
        img {
-           width: 110%;
+           width: 100%;
        }
+
     }
     .slick-prev, .slick-next {
         border: none;
@@ -25,5 +26,13 @@
         right:-66px;
         left: auto;
     }
-  
+    .slick-dots {
+        transform: rotate(-90deg);
+        list-style-type: none;
+        button {
+            display: none;
+        }   
+    } 
 }
+  
+
