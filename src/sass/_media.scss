@@ -20,6 +20,12 @@
     .container {
         max-width: 90%;
     }
+    .footer {
+        &__info {
+            width: 372px;
+            height: 198px;
+            padding: 17px 12px 44px;
+        }
 } 
 
 @media (max-width: 767px) { 
@@ -59,6 +65,7 @@
             transition: 0.5s all;
         }
         }
+    }
     }
     .container {
         max-width: 85%;
@@ -148,5 +155,16 @@
             margin-top: 40px;
         }
     }
+    .footer {
+        &__info {
+            height: 159px;
+        }
+        &__addr {
+            margin-bottom: 21px;
+        }
+        &__phone {
+            margin-bottom: 18px;
+        }
 
+    }
 }
