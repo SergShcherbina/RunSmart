@@ -63,7 +63,7 @@
             background-color: $main_color;
             margin: 20px;
             transition: 0.5s all;
-        }
+         }
         }
     }
     }
@@ -158,6 +158,7 @@
     .footer {
         &__info {
             height: 159px;
+            width: 338px;
         }
         &__addr {
             margin-bottom: 21px;
@@ -165,6 +166,21 @@
         &__phone {
             margin-bottom: 18px;
         }
-
+    }
+    .modal {
+        &__close {
+            top: -70px;
+            left: calc(50% - 10px);
+            max-width: 97%;
+            font-size: 55px;
+        }
+    }
+}  
+@media (max-width: 400px) {
+    .modal {
+        width: 96%;
+    }
+    .feed-form {
+        width: 100%;
     }
 }

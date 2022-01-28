@@ -6,6 +6,7 @@
 .container {
     max-width: 950px;
     margin: 0 auto;
+    overflow: hidden
     
 }
 
@@ -21,4 +22,5 @@
 @import 'blocks/catalog-item.scss';
 @import 'blocks/review.scss';
 @import 'blocks/footer.scss';
+@import 'blocks/modal.scss';
 @import 'media.scss';
