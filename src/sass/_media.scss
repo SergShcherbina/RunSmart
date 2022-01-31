@@ -62,7 +62,8 @@
             border-radius: 50%;
             background-color: $main_color;
             margin: 20px;
-            transition: 0.5s all;
+           /*  transition: 0.5s all; */
+            
          }
         }
     }
@@ -162,7 +163,7 @@
         }
         &__addr {
             margin-bottom: 21px;
-        }
+        } 
         &__phone {
             margin-bottom: 18px;
         }

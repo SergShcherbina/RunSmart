@@ -12,11 +12,10 @@ $(document).ready(function(){
                 slidesToScroll: 1,
                 infinite: true,
                 dots: true,
-                arrows: false
+                arrows: false,
               }
             },
         ] 
-        
     });
     
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() {
@@ -27,7 +26,7 @@ $(document).ready(function(){
 
     // $('.catalog-item__link').each(function(i) {
     //  $(this).on('click', function(e) {
-    //    e.preventDefault();                                     /* убираем стандартное поведение ссылки */
+    //    e.preventDefault();              /* убираем стандартное поведение ссылки */
     //    $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
     //    $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
     //  })
@@ -64,10 +63,48 @@ $(document).ready(function(){
       $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
     });
 
-    $('.button_mini').each(function(i) {
+    $('.button_mini').each(function(i) {   //при нажатии на кнопку с классор .button_min
       $(this).on('click', function() {
-        $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
-        $('.overlay, #order').fadeIn('slow');
+        $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text()); //в поле с классом .modal__descr вставляется текст из поля с классом .catalog-item__subtitle
+        $('.overlay, #order').fadeIn('slow'); //плавная анимация перечисленных селекторов
       })
     });
+    
+  //настройка валлидации форм
+
+    function valideForms(form){ //создал функцию с переменной
+      $(form).validate({
+        rules: {
+          name: {
+            required: true,
+            minlength: 2  //минимальное количесво символов в поле ввода
+          },
+          phone: "required",
+          email: {
+            required: true,
+            email: true
+          }
+          },
+        messages: {
+          name: {
+            required: "Введите ваше имя",
+            minlength: jQuery.validator.format("Минимум {0} символа")
+          },
+          phone: "Введите номер телефона",
+          email: {
+            required: "Введите адрес почты",
+            email: "введите адрес почты, например: name@gmail.com"
+          }
+        }
+      });
+    };
+
+    valideForms('#consultation-form'); //подставил в переменную
+    valideForms('#consultation form');
+    valideForms('#order form');
+
+    //настройка Masked input
+
+    $("input[name=phone]").mask("+375 (99) 999-99-99"); 
+
 });
